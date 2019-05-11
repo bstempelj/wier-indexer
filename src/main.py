@@ -1,4 +1,5 @@
 from pathlib import Path
+from bs4 import BeautifulSoup
 
 p = Path('.')
 p = p / 'data'
@@ -21,3 +22,8 @@ if __name__ == '__main__':
             files.append(f)
 
     print('#files:', len(files))
+
+    with open(files[0], 'r', encoding='utf-8') as fp:
+        soup = BeautifulSoup(fp, 'html.parser')
+        title = soup.find_all(class_='c-content-title-1')[0].find('h1').string
+        print(title)
