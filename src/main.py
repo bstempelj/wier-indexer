@@ -1,8 +1,7 @@
 from pathlib import Path
 from bs4 import BeautifulSoup
 
-p = Path('.')
-p = p / 'data'
+p = Path('.') / 'data'
 
 sites = {
     'eprostor': p / 'e-prostor.gov.si',
@@ -11,19 +10,10 @@ sites = {
     'podatki': p / 'podatki.gov.si'
 }
 
-def get_html_files(p):
-    return [x for x in p.iterdir() if not x.is_dir() and x.suffix == '.html']
-
 if __name__ == '__main__':
-    files = []
-
-    for site in sites.values():
-        for f in get_html_files(site):
-            files.append(f)
-
-    print('#files:', len(files))
-
-    with open(files[0], 'r', encoding='utf-8') as fp:
+    test_site = sites['eprostor'] / 'e-prostor.gov.si.1.html'
+    with test_site.open(encoding='utf-8') as fp:
         soup = BeautifulSoup(fp, 'html.parser')
         title = soup.find_all(class_='c-content-title-1')[0].find('h1').string
-        print(title)
+        content = soup.find_all(class_='ce-bodytext')[0].get_text()
+        print(content)
