@@ -14,10 +14,16 @@ sites = {
 
 if __name__ == '__main__':
     test_site = sites['eprostor'] / 'e-prostor.gov.si.1.html'
+
     with test_site.open(encoding='utf-8') as fp:
         soup = BeautifulSoup(fp, 'html.parser')
+
+        # get title and content from article
         title = soup.find_all(class_='c-content-title-1')[0].find('h1').string
         content = soup.find_all(class_='ce-bodytext')[0].get_text()
-        content = word_tokenize(content)
-        content = list(filter(lambda w: w not in si_stopwords, content))
-        print(content)
+
+        # tokenize content into lowercase words
+        words = list(map(lambda w: w.lower(), word_tokenize(content)))
+
+        # remove words that appear in slovenian stopwords
+        words = list(filter(lambda w: w not in si_stopwords, words))
