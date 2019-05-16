@@ -1,5 +1,7 @@
+import re
 from nltk import word_tokenize
 from stopwords import stop_words_slovene as si_stopwords
+from stopwords import oth_stopwords
 from pathlib import Path
 from bs4 import BeautifulSoup
 
@@ -12,18 +14,28 @@ sites = {
     'podatki': p / 'podatki.gov.si'
 }
 
-if __name__ == '__main__':
-    test_site = sites['eprostor'] / 'e-prostor.gov.si.1.html'
 
-    with test_site.open(encoding='utf-8') as fp:
+def parse_site(site):
+    with site.open(mode='rb') as fp:
         soup = BeautifulSoup(fp, 'html.parser')
 
-        # get title and content from article
-        title = soup.find_all(class_='c-content-title-1')[0].find('h1').string
-        content = soup.find_all(class_='ce-bodytext')[0].get_text()
+        # get body text
+        body = soup.find('body')
+        text = body.get_text()
 
         # tokenize content into lowercase words
-        words = list(map(lambda w: w.lower(), word_tokenize(content)))
+        words = list(map(lambda w: w.lower(), word_tokenize(text)))
 
         # remove words that appear in slovenian stopwords
-        words = list(filter(lambda w: w not in si_stopwords, words))
+        words = list(filter(lambda w: w not in si_stopwords.union(oth_stopwords), words))
+
+        return words
+
+
+if __name__ == '__main__':
+    eprostor_sites = [
+        site for site in sites['eprostor'].iterdir() if site.suffix == '.html']
+
+    for site in eprostor_sites:
+        parsed_words = parse_site(site)
+        print('{} => {}'.format(site, len(parsed_words)))
