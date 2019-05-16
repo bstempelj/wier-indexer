@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 p = Path('.') / 'data'
 
-sites = {
+domains = {
     'eprostor': p / 'e-prostor.gov.si',
     'euprava': p / 'e-uprava.gov.si',
     'evem': p / 'evem.gov.si',
@@ -32,10 +32,21 @@ def parse_site(site):
         return words
 
 
-if __name__ == '__main__':
-    eprostor_sites = [
-        site for site in sites['eprostor'].iterdir() if site.suffix == '.html']
+def parse_domain(domain):
+    sites = [site for site in domain.iterdir() if site.suffix == '.html']
+    print('Parsing {} sites from {}...'.format(len(sites), domain))
+    words = []
+    for site in sites:
+        words += parse_site(site)
+    return words
 
-    for site in eprostor_sites:
-        parsed_words = parse_site(site)
-        print('{} => {}'.format(site, len(parsed_words)))
+
+if __name__ == '__main__':
+    print('#words:', len(parse_domain(domains['eprostor'])))
+    print('#words:', len(parse_domain(domains['euprava'])))
+    print('#words:', len(parse_domain(domains['evem'])))
+    print('#words:', len(parse_domain(domains['podatki'])))
+
+    # for site in eprostor_sites:
+    #     parsed_words = parse_site(site)
+    #     print('{} => {}'.format(site, len(parsed_words)))
