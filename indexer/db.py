@@ -25,6 +25,16 @@ class DB:
         self.cursor.execute('INSERT INTO IndexWord VALUES (?)', (word,))
     self.conn.commit()
 
+  def save_domain_posting(self, domain):
+    for site in domain:
+        for word, freq_info in domain[site].items():
+            (num_freq, freq_idxs) = freq_info
+            freq_idxs = ','.join(str(e) for e in freq_idxs)
+            site_path = str(site.relative_to('data').as_posix())
+            self.cursor.execute('INSERT INTO Posting VALUES (?, ?, ?, ?)',
+                        (word, site_path, num_freq, freq_idxs))
+    self.conn.commit()
+
   def load_words(self):
     return [word[0] for word in self.cursor.execute('SELECT * FROM IndexWord')]
 
