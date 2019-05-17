@@ -71,42 +71,25 @@ if __name__ == '__main__':
     db.drop_tables()
     db.create_tables()
 
-    # (3) parse sites and save postings in database
-    start_t = time.time()
-    eprostor = parse_domain(domains['eprostor'])
-    db.save_domain_posting(eprostor[1])
-    end_t = time.time() - start_t
-    print('Parsed {} words in {} seconds.'.format(
-        len(eprostor[0]), round(end_t, 2)), end='\n'*2)
+    # (3) parse sites and save posting
+    # and words in database
+    distinct_words = set()
 
-    start_t = time.time()
-    euprava = parse_domain(domains['euprava'])
-    db.save_domain_posting(euprava[1])
-    end_t = time.time() - start_t
-    print('Parsed {} words in {} seconds.'.format(
-        len(euprava[0]), round(end_t, 2)), end='\n'*2)
+    for domain_name in domains:
+        # predolgo trajata na laptopu, bom na kišti pognou :)
+        if domain_name in ['evem', 'podatki']:
+            continue
+        start_t = time.time()
+        domain = parse_domain(domains[domain_name])
+        db.save_domain_posting(domain[1])
+        distinct_words.update(domain[0])
+        end_t = time.time() - start_t
+        print('Parsed {} words in {} seconds.'.format(
+            len(domain[0]), round(end_t, 2)), end='\n'*2)
 
-    # => EVEM ima 650 strani in na mojmu kompu traja čist predoug!!!
-    # start_t = time.time()
-    # evem = parse_domain(domains['evem'])
-    # db.save_domain_posting(evem[1])
-    # end_t = time.time() - start_t
-    # print('Parsed {} words in {} seconds.'.format(
-    #     len(evem[0]), round(end_t, 2)), end='\n'*2)
+    db.save_words(distinct_words)
 
-    # => PODATKI niso nič boljš, ker imajo 561 strani...
-    # start_t = time.time()
-    # podatki = parse_domain(domains['podatki'])
-    # db.save_domain_posting(podatki[1])
-    # end_t = time.time() - start_t
-    # print('Parsed {} words in {} seconds.'.format(
-    #     len(podatki[0]), round(end_t, 2)), end='\n'*2)
-
-    # (4) save all found words in database
-    db.save_words(set(eprostor[0] + euprava[0]))
-
-    # (5) log number of found words
-    print('Loaded {} words from database.'.format(len(db.load_words())))
+    # (4) log number of found words
+    print('Loaded {} distinct words from database.'.format(len(db.load_words())))
 
     db.close()
-
