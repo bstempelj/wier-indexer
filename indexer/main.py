@@ -9,11 +9,6 @@ from db import DB
 
 
 def parse_site(site):
-    """
-    Find text the body of a site, split by words, convert them to
-    lowercase and strip out the unimportant ones. The result is a
-    list.
-    """
     with site.open(mode='rb') as fp:
         soup = BeautifulSoup(fp, 'html.parser')
 
@@ -40,9 +35,6 @@ def parse_site(site):
 
 
 def parse_domain(domain):
-    """
-    Parse all sites in a given domain and return a list of words.
-    """
     sites = [site for site in domain.iterdir() if site.suffix == '.html']
     print('Parsing {} sites from {}...'.format(len(sites), domain))
 
