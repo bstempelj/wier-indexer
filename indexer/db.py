@@ -38,5 +38,12 @@ class DB:
   def load_words(self):
     return [word[0] for word in self.cursor.execute('SELECT * FROM IndexWord')]
 
+  def data_retrieval(self, query):
+    words = ",".join(map(lambda x: "'" + x + "'", query.split(' ')))
+
+    sql = "SELECT word, documentName, sum(frequency), group_concat(indexes) FROM Posting WHERE word in (" + words + ") group by documentName order by frequency desc"
+    return self.cursor.execute(sql).fetchall()
+
+
   def close(self):
     self.conn.close()
