@@ -46,6 +46,7 @@ def parse_domain(domain):
     sites_with_word_freqs = {}
     domain_words = []
     for site in sites:
+        print(site)
         (words, word_freq) = parse_site(site)
         domain_words += words
         sites_with_word_freqs[site] = word_freq
@@ -74,8 +75,8 @@ def prvi_del():
 
     for domain_name in domains:
         # predolgo trajata na laptopu, bom na kisti pognou :)
-        if domain_name in ['evem', 'podatki']:
-            continue
+        #if domain_name in ['evem', 'podatki']:
+            #continue
         start_t = time.time()
         domain = parse_domain(domains[domain_name])
         db.save_domain_posting(domain[1])
@@ -102,7 +103,7 @@ def create_snippet(text, index):
                 string = text[6 - i] + string
             else:
                 string = text[6 - i] + " " + string
-                
+
         if words_remaining == 0:
             break
 
@@ -123,7 +124,7 @@ def create_snippet(text, index):
 if __name__ == '__main__':
     # prvi_del()
 
-    data = db.data_retrieval('ureja motornega izpitu')
+    data = db.data_retrieval('Univerza v ljubljani')
 
     for record in data:
         site = 'data/' + record[1]

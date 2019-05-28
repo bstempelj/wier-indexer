@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de68d948-fd45-4dae-83f5-b78892bb3397" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8653c6ea-1026-4e94-bbc6-e985602c5dd5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e865717c-420f-4849-8a7c-851195685d5e.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.377.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.377.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.55.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/indexer/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/indexer/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexer/inverted-index.db" beforeDir="false" afterPath="$PROJECT_DIR$/indexer/inverted-index.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/indexer/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/indexer/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inverted-index.db" beforeDir="false" afterPath="$PROJECT_DIR$/inverted-index.db" afterDir="false" />
     </list>
@@ -13,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/wier_indexer$main.coverage" NAME="main Coverage Results" MODIFIED="1558712179521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/indexer" />
+    <SUITE FILE_PATH="coverage/wier_indexer$main.coverage" NAME="main Coverage Results" MODIFIED="1558986339476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/indexer" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -45,24 +53,7 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="inverted-index" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="Posting: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="inverted-index [2]" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="inverted-index [2]" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="inverted-index [2]" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -72,38 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/indexer/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indexer/db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://e865717c-420f-4849-8a7c-851195685d5e/schema/main/table/IndexWord">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://e865717c-420f-4849-8a7c-851195685d5e/schema/main/table/Posting">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+            <state relative-caret-position="705">
+              <caret line="139" column="23" lean-forward="true" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -114,6 +75,13 @@
     <findStrings>
       <find>sites</find>
       <find>parse_site</find>
+      <find>460</find>
+      <find>1</find>
+      <find>96</find>
+      <find>14</find>
+      <find>sistem</find>
+      <find>trgovina</find>
+      <find>Defektolog v zdravstveni dejavnosti</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,7 +91,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/8653c6ea-1026-4e94-bbc6-e985602c5dd5/console.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/46a51092-a2b9-434e-99fa-f067bceaf768/console.sql" />
         <option value="$PROJECT_DIR$/indexer/db.py" />
+        <option value="$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.377.html" />
         <option value="$PROJECT_DIR$/indexer/main.py" />
       </list>
     </option>
@@ -140,6 +110,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,7 +127,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,24 +192,29 @@
       <workItem from="1558617353332" duration="1209000" />
       <workItem from="1558619610802" duration="7794000" />
       <workItem from="1558675894196" duration="157000" />
-      <workItem from="1558704744971" duration="14281000" />
+      <workItem from="1558704744971" duration="14720000" />
+      <workItem from="1558802375353" duration="11000" />
+      <workItem from="1558979188348" duration="3687000" />
+      <workItem from="1558987614572" duration="1116000" />
+      <workItem from="1559058634296" duration="930000" />
+      <workItem from="1559072435430" duration="177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23441000" />
+    <option name="totallyTimeSpent" value="29801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14224665" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15506716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2857143" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33979592" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -254,7 +229,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.17155068" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.17155068" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,13 +256,6 @@
       </provider>
     </entry>
     <entry file="das://8653c6ea-1026-4e94-bbc6-e985602c5dd5/schema/main/table/Posting" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pathlib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="1073" selection-start-line="1073" selection-end-line="1073" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5270">
@@ -295,34 +263,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://e865717c-420f-4849-8a7c-851195685d5e/schema/main/table/Posting">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="das://e865717c-420f-4849-8a7c-851195685d5e/schema/main/table/Posting" />
+    <entry file="das://e865717c-420f-4849-8a7c-851195685d5e/schema/main/table/IndexWord" />
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9573" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3861" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3810" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4490" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3878" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9811" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.7.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6241" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4439" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.9.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1681" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.10.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7504" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.12.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4099" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.311.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3335" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.345.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3691" />
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pathlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="876" column="12" lean-forward="true" selection-start-line="876" selection-start-column="12" selection-end-line="876" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="das://e865717c-420f-4849-8a7c-851195685d5e/schema/main/table/IndexWord">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.372.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4049" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.373.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4139" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.55.html" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/46a51092-a2b9-434e-99fa-f067bceaf768/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <filtering enabled="true" />
+          <caret column="98" selection-start-column="98" selection-end-column="98" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/e-uprava.gov.si/e-uprava.gov.si.42.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="1439" column="16" lean-forward="true" selection-start-line="1439" selection-start-column="16" selection-end-line="1439" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.371.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23011" column="42" selection-start-line="23011" selection-start-column="34" selection-end-line="23011" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://46a51092-a2b9-434e-99fa-f067bceaf768/schema/main/table/IndexWord" />
     <entry file="file://$PROJECT_DIR$/indexer/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
+        <state relative-caret-position="593">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/evem.gov.si/evem.gov.si.377.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="156" column="95" selection-start-line="156" selection-start-column="95" selection-end-line="156" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://46a51092-a2b9-434e-99fa-f067bceaf768/schema/main/table/Posting" />
     <entry file="file://$PROJECT_DIR$/indexer/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="705">
+          <caret line="139" column="23" lean-forward="true" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="23" />
         </state>
       </provider>
     </entry>

@@ -38,6 +38,7 @@ class DB:
   def load_words(self):
     return [word[0] for word in self.cursor.execute('SELECT * FROM IndexWord')]
 
+
   def data_retrieval(self, query):
     words = ",".join(map(lambda x: "'" + x + "'", query.split(' ')))
 
